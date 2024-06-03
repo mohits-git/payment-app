@@ -6,10 +6,10 @@ type Props = {
 
 const Page: React.FC<Props> = () => {
     return (
-        <>
-            <h1>Payment App</h1>
-            <h2>Merchant App</h2>
-        </>
+        <div className="w-full min-h-screen flex flex-col justify-center items-center">
+            <h1 className="text-2xl font-bold">Payment App</h1>
+            <h2 className="text-xl font-semibold">merchant-app</h2>
+        </div>
     )
 }
 
