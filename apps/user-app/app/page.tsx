@@ -1,8 +1,12 @@
+import { PrismaClient } from "@repo/db/client";
 import React from "react";
 
 type Props = {
 
 }
+
+const db = new PrismaClient();
+
 
 const Page: React.FC<Props> = () => {
     return (
