@@ -1,20 +1,17 @@
-import { PrismaClient } from "@repo/db/client";
+'use client'
+import { Appbar } from "@repo/ui/app-bar";
+import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
-import Balance from "./_components/balance";
 
 type Props = {
 
 }
 
-const db = new PrismaClient();
-
-
 const Page: React.FC<Props> = () => {
+  const session = useSession();
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center">
-      <h1 className="text-2xl font-bold">Payment App</h1>
-      <h2 className="text-xl font-semibold">user-app</h2>
-      <Balance />
+    <div>
+      <Appbar user={session.data?.user} onSignin={signIn} onSignout={signOut} />
     </div>
   )
 }
