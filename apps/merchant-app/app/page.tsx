@@ -1,3 +1,6 @@
+'use client'
+import { Appbar } from "@repo/ui/app-bar";
+import { signIn, signOut, useSession } from "next-auth/react";
 import React from "react";
 
 type Props = {
@@ -5,12 +8,12 @@ type Props = {
 }
 
 const Page: React.FC<Props> = () => {
-    return (
-        <div className="w-full min-h-screen flex flex-col justify-center items-center">
-            <h1 className="text-2xl font-bold">Payment App</h1>
-            <h2 className="text-xl font-semibold">merchant-app</h2>
-        </div>
-    )
+  const session = useSession();
+  return (
+    <div>
+      <Appbar user={session.data?.user} onSignin={signIn} onSignout={signOut} />
+    </div>
+  )
 }
 
 export default Page
