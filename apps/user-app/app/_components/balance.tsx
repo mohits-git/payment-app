@@ -8,12 +8,12 @@ type Props = {
 }
 
 const Balance: React.FC<Props> = () => {
-    const balance = useBalance();
-    return (
-        <div>
-            Your Balance is: {balance}
-        </div>
-    )
+  const balance = useBalance();
+  return (
+    <div>
+      Your Balance is: {balance}
+    </div>
+  )
 }
 
 export default Balance
