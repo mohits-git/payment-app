@@ -16,9 +16,9 @@
     "@prisma/client": "latest"
   },
   "devDependencies": {
-    "prisma": "latest"
+    "prisma": "^5.15.0"
   },
   "exports": {
-      "./client": "./index.ts"
+    "./client": "./index.ts"
   }
 }
