@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./icons/transactions-icon": "./src/icons/transactions-icon.tsx",
+    "./icons/transfer-icon": "./src/icons/transfer-icon.tsx",
+    "./icons/home-icon": "./src/icons/home-icon.tsx",
     "./app-bar": "./src/app-bar.tsx",
     "./button": "./src/button.tsx",
     "./card": "./src/card.tsx",
