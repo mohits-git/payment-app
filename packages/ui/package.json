@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./center": "./src/center.tsx",
     "./icons/transactions-icon": "./src/icons/transactions-icon.tsx",
     "./icons/transfer-icon": "./src/icons/transfer-icon.tsx",
     "./icons/home-icon": "./src/icons/home-icon.tsx",
