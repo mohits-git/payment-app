@@ -45,7 +45,7 @@ const TransferPage: React.FC<Props> = async () => {
   const balance = await getBalance();
   const transactions = await getOnRampTransactions();
 
-  return <div className="w-screen">
+  return <div className="w-[calc(100vw-288px)]">
     <div className="text-4xl text-[#6a51a6] pt-8 mb-8 font-bold">
       Transfer
     </div>
