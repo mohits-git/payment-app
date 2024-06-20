@@ -2,6 +2,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth";
 import prisma from "@repo/db/client";
+import { connect } from "http2";
 
 export async function p2pTransfer(to: string, amount: number) {
   const session = await getServerSession(authOptions);
@@ -41,5 +42,21 @@ export async function p2pTransfer(to: string, amount: number) {
       where: { userId: toUser.id },
       data: { amount: { increment: amount } },
     });
+
+    await tx.p2pTransfer.create({
+      data: {
+        amount,
+        timestamp: new Date(),
+        fromUser: {
+          connect: from
+        },
+        toUser: {
+          connect: {
+            ...toUser, 
+            email: toUser.email || undefined
+          }
+        }
+      }
+    })
   });
 }
