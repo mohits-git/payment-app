@@ -6,6 +6,7 @@
     "./text-input": "./src/text-input.tsx",
     "./select": "./src/select.tsx",
     "./center": "./src/center.tsx",
+    "./icons/p2p-transfer-icon": "./src/icons/p2p-transfer-icon.tsx",
     "./icons/transactions-icon": "./src/icons/transactions-icon.tsx",
     "./icons/transfer-icon": "./src/icons/transfer-icon.tsx",
     "./icons/home-icon": "./src/icons/home-icon.tsx",
