@@ -48,6 +48,14 @@ export const authOptions: NextAuthOptions = {
             }
           });
 
+          await db.balance.create({
+            data: {
+              userId: user.id,
+              amount: Math.floor(Math.random()*10000) + 1,
+              locked: 0
+            }
+          })
+
           return {
             id: user.id.toString(),
             name: user.name,
